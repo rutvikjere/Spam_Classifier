@@ -1,0 +1,60 @@
+<html>
+
+<head>
+
+<title> Spam Classifier </title>
+
+<style>
+body {
+background-image: url("file:///C:/Users/Rutvik/Documents/Spam%20Classification/static/bg2.jpg");
+background-size: cover;
+}
+
+form {
+text-align: center;
+}
+
+textarea {
+width: 30%;
+height: 20%;
+vertical-align: middle;
+}
+
+input[type=submit] {
+background-color: green;
+color: white;
+width: 10%;
+height: 5%;
+}
+
+label {
+font-size: 20px;
+display: inline-block;
+width: 100px;
+text-align: right;
+vertical-align: middle;
+}
+
+</style>
+
+</head>
+
+<body>
+<center><h1> Rutvik's first attempt at a web Machine Learning Model! </h1></center>
+
+<form action = "{{url_for('predict')}}" method = "post">
+<label for = "email">Email</label>
+<textarea rows = 50 cols = 100 type = 'text' id = "email", name = "message", required = "required", placeholder = "Enter the email..."></textarea>
+<br></br>
+
+<label></label>
+<input id = "submit", type = "submit", value = "Predict"></input>
+
+</form>
+
+<br></br>
+
+<center><h2> {{prediction_text}}</h2></center>
+</body>
+
+</html>
