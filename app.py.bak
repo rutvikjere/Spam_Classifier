@@ -4,7 +4,7 @@ import numpy as np
 
 model = joblib.load("pipe_NB.pkl")
 
-app = Flask(__name__, static_url_path=r'C:\Users\Rutvik\Documents\Spam Classification\static\bg2.jpg')
+app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
 def home():

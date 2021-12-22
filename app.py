@@ -2,6 +2,8 @@ from flask import Flask, jsonify, request, render_template
 import joblib
 import numpy as np
 
+# Intial change
+
 model = joblib.load("pipe_NB.pkl")
 
 app = Flask(__name__, static_url_path='/static')
